@@ -39,8 +39,10 @@
 }
 - (void)initTitleCollection
 {
-    self.titleCollection = [[HBTitleSelectCollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
+    self.titleCollection = [[HBTitleSelectCollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40) labelWidth:120];
     self.titleCollection.hbDelegate = self;
+    self.titleCollection.selectColor = [UIColor purpleColor];
+    self.titleCollection.selectIndex = 0;
     self.titleCollection.titleArray = @[@"测试",@"测试",@"测试",@"测试",@"测试",@"测试",@"测试"];
     [self.view addSubview:self.titleCollection];
 }
@@ -51,7 +53,7 @@
     self.bigScrollView.pagingEnabled = YES;
     self.bigScrollView.delegate = self;
     [self.view addSubview:self.bigScrollView];
-    NSLog(@"zzzzzzz");
+
     DemoVC1 *VC1 = [[DemoVC1 alloc] init];
     DemoVC2 *VC2 = [[DemoVC2 alloc] init];
     DemoVC3 *VC3 = [[DemoVC3 alloc] init];

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B099FB71D90D3BF00C629F5 /* DemoVC6.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B099FB61D90D3BF00C629F5 /* DemoVC6.m */; };
 		5B099FBA1D90D40000C629F5 /* DemoVC7.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B099FB91D90D40000C629F5 /* DemoVC7.m */; };
+		5B15418821266FD700114F9D /* UIView+HBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15418621266FD700114F9D /* UIView+HBFrame.m */; };
 		5B3D38781D8FD9E300B17266 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D38771D8FD9E300B17266 /* main.m */; };
 		5B3D387B1D8FD9E300B17266 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D387A1D8FD9E300B17266 /* AppDelegate.m */; };
 		5B3D38811D8FD9E300B17266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3D387F1D8FD9E300B17266 /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		5B099FB61D90D3BF00C629F5 /* DemoVC6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC6.m; sourceTree = "<group>"; };
 		5B099FB81D90D40000C629F5 /* DemoVC7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7.h; sourceTree = "<group>"; };
 		5B099FB91D90D40000C629F5 /* DemoVC7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7.m; sourceTree = "<group>"; };
+		5B15418621266FD700114F9D /* UIView+HBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HBFrame.m"; sourceTree = "<group>"; };
+		5B15418721266FD700114F9D /* UIView+HBFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HBFrame.h"; sourceTree = "<group>"; };
 		5B3D38731D8FD9E300B17266 /* HBNewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBNewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3D38771D8FD9E300B17266 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B3D38791D8FD9E300B17266 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 		5B3D38B51D8FDF7400B17266 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B15418721266FD700114F9D /* UIView+HBFrame.h */,
+				5B15418621266FD700114F9D /* UIView+HBFrame.m */,
 				5B3D38B91D8FE16E00B17266 /* HBTitleSelectCollectionView.h */,
 				5B3D38BA1D8FE16E00B17266 /* HBTitleSelectCollectionView.m */,
 				5B3D38BC1D8FE53C00B17266 /* HBTitleCell.h */,
@@ -382,6 +387,7 @@
 				5B3D38AF1D8FDAB300B17266 /* HBBaseNavgationController.m in Sources */,
 				5B3D38CB1D8FF14500B17266 /* DemoVC3.m in Sources */,
 				5B3D38B81D8FDFB700B17266 /* HBNewsViewController.m in Sources */,
+				5B15418821266FD700114F9D /* UIView+HBFrame.m in Sources */,
 				5B3D38BE1D8FE53C00B17266 /* HBTitleCell.m in Sources */,
 				5B3D38CE1D8FF15300B17266 /* DemoVC4.m in Sources */,
 				5B099FBA1D90D40000C629F5 /* DemoVC7.m in Sources */,

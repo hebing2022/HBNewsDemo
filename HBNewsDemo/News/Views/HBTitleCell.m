@@ -7,6 +7,7 @@
 //
 
 #import "HBTitleCell.h"
+#import "UIView+HBFrame.h"
 @interface HBTitleCell()
 
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -18,13 +19,10 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        
         _titleLabel = [UILabel new];
-        _titleLabel.frame = CGRectMake(0, 0, 80, 40);
+        _titleLabel.frame = CGRectMake(0, 0, self.width, self.height);
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.textColor = [UIColor blackColor];
         [self.contentView addSubview:_titleLabel];
-        
     }
     
     return self;
@@ -32,9 +30,11 @@
 - (void)setTitleModel:(TitleModel *)titleModel
 {
     _titleModel = titleModel;
-    
     _titleLabel.text = _titleModel.title;
-    _titleLabel.textColor = _titleModel.isSelected ? [UIColor redColor] : [UIColor blackColor];
     _titleLabel.font = _titleModel.isSelected ? [UIFont systemFontOfSize:17] : [UIFont systemFontOfSize:14];
+}
+- (void)setSelectColor:(UIColor *)selectColor {
+    _selectColor = selectColor;
+    _titleLabel.textColor = _titleModel.isSelected ? self.selectColor : self.normalColor;
 }
 @end

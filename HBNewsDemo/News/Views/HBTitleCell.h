@@ -12,4 +12,8 @@
 
 @property (nonatomic, strong) TitleModel *titleModel;
 
+@property(nonatomic, strong) UIColor *selectColor;
+
+@property(nonatomic, strong) UIColor *normalColor;
+
 @end
