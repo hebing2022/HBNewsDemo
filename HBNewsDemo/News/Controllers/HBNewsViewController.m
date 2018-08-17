@@ -51,7 +51,7 @@
     self.bigScrollView.pagingEnabled = YES;
     self.bigScrollView.delegate = self;
     [self.view addSubview:self.bigScrollView];
-    
+    NSLog(@"zzzzzzz");
     DemoVC1 *VC1 = [[DemoVC1 alloc] init];
     DemoVC2 *VC2 = [[DemoVC2 alloc] init];
     DemoVC3 *VC3 = [[DemoVC3 alloc] init];
