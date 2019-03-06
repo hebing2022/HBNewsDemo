@@ -32,9 +32,14 @@
     _titleModel = titleModel;
     _titleLabel.text = _titleModel.title;
     _titleLabel.font = _titleModel.isSelected ? [UIFont systemFontOfSize:17] : [UIFont systemFontOfSize:14];
+    _titleLabel.textColor = _titleModel.isSelected ? self.selectColor : self.normalColor;
 }
 - (void)setSelectColor:(UIColor *)selectColor {
     _selectColor = selectColor;
+    _titleLabel.textColor = _titleModel.isSelected ? self.selectColor : self.normalColor;
+}
+- (void)setNormalColor:(UIColor *)normalColor {
+    _normalColor = normalColor;
     _titleLabel.textColor = _titleModel.isSelected ? self.selectColor : self.normalColor;
 }
 @end

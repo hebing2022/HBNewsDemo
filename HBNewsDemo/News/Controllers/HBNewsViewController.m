@@ -7,7 +7,7 @@
 //
 
 #import "HBNewsViewController.h"
-#import "HBTitleSelectCollectionView.h"
+#import "HBTagsView.h"
 #import "DemoVC1.h"
 #import "DemoVC2.h"
 #import "DemoVC3.h"
@@ -18,9 +18,9 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface HBNewsViewController()<UIScrollViewDelegate,HBTitleSelectCollectionViewDelegate>
+@interface HBNewsViewController()<UIScrollViewDelegate, HBTagsViewDelegate>
 
-@property (nonatomic, strong) HBTitleSelectCollectionView *titleCollection;
+@property (nonatomic, strong) HBTagsView *tagsView;
 
 @property (nonatomic, strong) UIScrollView *bigScrollView;
 
@@ -37,17 +37,14 @@
     
     [self initBigScrollView];
 }
-- (void)initTitleCollection
-{
-    self.titleCollection = [[HBTitleSelectCollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40) labelWidth:120];
-    self.titleCollection.hbDelegate = self;
-    self.titleCollection.selectColor = [UIColor purpleColor];
-    self.titleCollection.selectIndex = 0;
-    self.titleCollection.titleArray = @[@"测试",@"测试",@"测试",@"测试",@"测试",@"测试",@"测试"];
-    [self.view addSubview:self.titleCollection];
+- (void)initTitleCollection {
+    HBTagsView *tagsView = [[HBTagsView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40) tagsArray:@[@"测试",@"测试",@"测试",@"测试",@"测试",@"测试",@"测试"] delegate:self];
+    self.tagsView = tagsView;
+    self.tagsView.indicatorWith = 100;
+    self.tagsView.normalColor = [UIColor purpleColor];
+    [self.view addSubview:self.tagsView];
 }
-- (void)initBigScrollView
-{
+- (void)initBigScrollView {
     self.bigScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH, SCREEN_HEIGHT - 40)];
     self.bigScrollView.bounces = NO;
     self.bigScrollView.pagingEnabled = YES;
@@ -79,12 +76,10 @@
 }
 #pragma mark - UIScrollViewDelegate
 /* 滚动结束*/
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self scrollViewDidEndScrollingAnimation:scrollView];
 }
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     // 获得索引
     NSUInteger index = scrollView.contentOffset.x / self.bigScrollView.frame.size.width;
     HBBaseViewController *VC = self.childViewControllers[index];
@@ -92,16 +87,12 @@
     [self.bigScrollView addSubview:VC.view];
     
     NSLog(@"contentOffset==%@",NSStringFromCGPoint(self.bigScrollView.contentOffset));
-    
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
-    [self.titleCollection didSelectItemAtIndexPath:indexPath];
+    [self.tagsView didSelectItemAtIndexPath:indexPath];
 
 }
-#pragma mark - HBTitleSelectCollectionViewDelegate
-- (void)HBTitleSelectCollectionView:(HBTitleSelectCollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-
+#pragma mark - [self.bigScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * indexPath.row,0) animated:YES];
+- (void)HBTagsView:(HBTagsView *)tagsView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self.bigScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * indexPath.row,0) animated:YES];
-
 }
 @end

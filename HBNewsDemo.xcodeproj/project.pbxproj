@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E275C1F222FABB3000243ED /* HBTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E275C1E222FABB3000243ED /* HBTagsView.m */; };
 		5B099FB71D90D3BF00C629F5 /* DemoVC6.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B099FB61D90D3BF00C629F5 /* DemoVC6.m */; };
 		5B099FBA1D90D40000C629F5 /* DemoVC7.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B099FB91D90D40000C629F5 /* DemoVC7.m */; };
 		5B15418821266FD700114F9D /* UIView+HBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15418621266FD700114F9D /* UIView+HBFrame.m */; };
@@ -21,7 +22,6 @@
 		5B3D38AF1D8FDAB300B17266 /* HBBaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D38AE1D8FDAB300B17266 /* HBBaseNavgationController.m */; };
 		5B3D38B21D8FDAD700B17266 /* HBBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D38B11D8FDAD700B17266 /* HBBaseTabBarController.m */; };
 		5B3D38B81D8FDFB700B17266 /* HBNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D38B71D8FDFB700B17266 /* HBNewsViewController.m */; };
-		5B3D38BB1D8FE16E00B17266 /* HBTitleSelectCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D38BA1D8FE16E00B17266 /* HBTitleSelectCollectionView.m */; };
 		5B3D38BE1D8FE53C00B17266 /* HBTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D38BD1D8FE53C00B17266 /* HBTitleCell.m */; };
 		5B3D38C21D8FEAA000B17266 /* TitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D38C11D8FEAA000B17266 /* TitleModel.m */; };
 		5B3D38C51D8FF11C00B17266 /* DemoVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3D38C41D8FF11C00B17266 /* DemoVC1.m */; };
@@ -49,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E275C1D222FABB3000243ED /* HBTagsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBTagsView.h; sourceTree = "<group>"; };
+		4E275C1E222FABB3000243ED /* HBTagsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBTagsView.m; sourceTree = "<group>"; };
 		5B099FB51D90D3BF00C629F5 /* DemoVC6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC6.h; sourceTree = "<group>"; };
 		5B099FB61D90D3BF00C629F5 /* DemoVC6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC6.m; sourceTree = "<group>"; };
 		5B099FB81D90D40000C629F5 /* DemoVC7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7.h; sourceTree = "<group>"; };
@@ -77,8 +79,6 @@
 		5B3D38B11D8FDAD700B17266 /* HBBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBBaseTabBarController.m; sourceTree = "<group>"; };
 		5B3D38B61D8FDFB700B17266 /* HBNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBNewsViewController.h; sourceTree = "<group>"; };
 		5B3D38B71D8FDFB700B17266 /* HBNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBNewsViewController.m; sourceTree = "<group>"; };
-		5B3D38B91D8FE16E00B17266 /* HBTitleSelectCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTitleSelectCollectionView.h; sourceTree = "<group>"; };
-		5B3D38BA1D8FE16E00B17266 /* HBTitleSelectCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTitleSelectCollectionView.m; sourceTree = "<group>"; };
 		5B3D38BC1D8FE53C00B17266 /* HBTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTitleCell.h; sourceTree = "<group>"; };
 		5B3D38BD1D8FE53C00B17266 /* HBTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTitleCell.m; sourceTree = "<group>"; };
 		5B3D38C01D8FEAA000B17266 /* TitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleModel.h; sourceTree = "<group>"; };
@@ -233,8 +233,8 @@
 			children = (
 				5B15418721266FD700114F9D /* UIView+HBFrame.h */,
 				5B15418621266FD700114F9D /* UIView+HBFrame.m */,
-				5B3D38B91D8FE16E00B17266 /* HBTitleSelectCollectionView.h */,
-				5B3D38BA1D8FE16E00B17266 /* HBTitleSelectCollectionView.m */,
+				4E275C1D222FABB3000243ED /* HBTagsView.h */,
+				4E275C1E222FABB3000243ED /* HBTagsView.m */,
 				5B3D38BC1D8FE53C00B17266 /* HBTitleCell.h */,
 				5B3D38BD1D8FE53C00B17266 /* HBTitleCell.m */,
 			);
@@ -317,6 +317,7 @@
 				TargetAttributes = {
 					5B3D38721D8FD9E300B17266 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3UF52T2NV2;
 					};
 					5B3D388B1D8FD9E300B17266 = {
 						CreatedOnToolsVersion = 7.3;
@@ -391,9 +392,9 @@
 				5B3D38BE1D8FE53C00B17266 /* HBTitleCell.m in Sources */,
 				5B3D38CE1D8FF15300B17266 /* DemoVC4.m in Sources */,
 				5B099FBA1D90D40000C629F5 /* DemoVC7.m in Sources */,
+				4E275C1F222FABB3000243ED /* HBTagsView.m in Sources */,
 				5B3D387B1D8FD9E300B17266 /* AppDelegate.m in Sources */,
 				5B3D38781D8FD9E300B17266 /* main.m in Sources */,
-				5B3D38BB1D8FE16E00B17266 /* HBTitleSelectCollectionView.m in Sources */,
 				5B3D38C51D8FF11C00B17266 /* DemoVC1.m in Sources */,
 				5B3D38D11D8FF15F00B17266 /* DemoVC5.m in Sources */,
 				5B099FB71D90D3BF00C629F5 /* DemoVC6.m in Sources */,
@@ -540,6 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 3UF52T2NV2;
 				INFOPLIST_FILE = HBNewsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = canfutianxia.HBNewsDemo;
@@ -552,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 3UF52T2NV2;
 				INFOPLIST_FILE = HBNewsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = canfutianxia.HBNewsDemo;
